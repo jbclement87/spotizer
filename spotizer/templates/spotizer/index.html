@@ -9,7 +9,12 @@
 
     <!-- Bootstrap -->
     <link href="static/spotizer/css/bootstrap.min.css" rel="stylesheet">
-
+    <link href="static/spotizer/style.css" rel="stylesheet">
+    <style type="text/css">
+        .col-lg-2 { line-height: 100px; }
+        .col-lg-5 { line-height: 200px; }
+        .col-lg-12 { line-height: 80px; }
+    </style>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -17,15 +22,26 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <body>
-    <h1>SPOTIZER</h1>
 
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1>SPOTIZER</h1>
+    <p>le site de Musique gratuit</p>
+  </div>
+            </p>
+
+        <div class="container">
+      <div class="row">
+        <div class="col-lg-12"> ARTISTES  </div>
+          <span class="glyphicons glyphicons-music"></span>
     <ul>
-    {% for Artiste in artistes %}
+        {% for Artiste in artistes %}
         <li>
-          <a href="album/{{Artiste.id}}"> {{Artiste.nom}} </a>
+            <a href="album/{{Artiste.id}}"> {{Artiste.nom}} </a>
         </li>
-    {% endfor %}
-</ul>
+        {% endfor %}
+            </ul>
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->

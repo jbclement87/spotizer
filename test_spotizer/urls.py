@@ -21,7 +21,9 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', views.index, name='index'),
     url(r'^album/(?P<artiste_id>[0-9]+)$', views.albums, name='album'),
-    url(r'^album/morceaux/(?P<album_id>[0-9]+)$', views.morceaux, name='morceaux')
+    url(r'^album/morceaux/(?P<album_id>[0-9]+)$', views.morceaux, name='morceaux'),
+    url(r'^status.html$', views.status, name='status'),
+    url(r'^stat_psutil.html$', views.stat_psutil, name='stat_psutil')
 
 
 ]
