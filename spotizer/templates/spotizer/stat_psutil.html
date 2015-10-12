@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
+    <title>Status PSutil</title>
 
     <!-- Bootstrap -->
     <link href="static/spotizer/css/bootstrap.min.css" rel="stylesheet">
@@ -23,30 +23,124 @@
     <![endif]-->
 </head>
 <body>
+
 <div class="container">
+    <div class="page-header">
+    <h1>Etat de la machine</h1>
 
-    <ul>
-        <li> Espace disque  {{disk}} % utilisé  </li>
-        <li> Memoire  {{mem}} % utilisé  </li>
-        <li> temperature cpu {{temperature}}</li>
-        <li> Charge CPU  {{cpu}}</li>
-
-
-    </ul>
-
-
-    <div class="progress">
-        <div class="progress-bar" role="progressbar" aria-valuenow={{cpu}} aria-valuemin="0" aria-valuemax="100"
-             style="width:{{cpu}}%;">
-            <span class="sr-only">60% Complete</span>
-        </div>
-
-    </div>
-
+    <p>PSutils</p>
 </div>
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="js/bootstrap.min.js"></script>
+
+
+    <!-- On rows -->
+    <table class="table">
+    <thead>
+      <tr>
+        <th> </th>
+        <th>Status</th>
+        <th>Visualisation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="glyphicon glyphicon-hdd" aria-hidden="true"></span></td>
+        <td>Espace disque {{disk}} % utilisé</td>
+        <td><div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow={{cpu}} aria-valuemin="0" aria-valuemax="100"
+                 style="width:{{disk}}%;">
+                {{disk}}%
+            </div>
+        </div></td>
+      </tr>
+      <tr>
+        <td><span class="glyphicon glyphicon-tasks" aria-hidden="true"></span></td>
+        <td>Memoire {{mem}} % utilisé</td>
+        <td>
+            <div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow={{mem}} aria-valuemin="0" aria-valuemax="100"
+                 style="width:{{mem}}%;">
+                    {{mem}}%
+
+            </div></div>
+        </td>
+      </tr>
+      <tr>
+        <td><span class="glyphicon glyphicon-fire" aria-hidden="true"></span></td>
+        <td><span id="idtemp"  temp="{{temperature}}" >temperature cpu {{temperature}} °C</span></td>
+        <td><div id="alertetemp"></div> </td>
+      </tr>
+      <tr>
+        <td> <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   id="svg2"
+   viewBox="0 0 14 13.999999"
+   height="14"
+   width="14">
+  <defs
+     id="defs4" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(-258.57144,-566.93366)"
+     id="layer1">
+    <g
+       id="g3475">
+      <path
+         id="rect3338"
+         transform="translate(258.57144,566.93366)"
+         d="M 2.1015625 0.6015625 L 2.1015625 2.0292969 L 0.671875 2.0292969 L 0.671875 3.4570312 L 2.1015625 3.4570312 L 2.1015625 4.8867188 L 0.671875 4.8867188 L 0.671875 6.3144531 L 2.1015625 6.3144531 L 2.1015625 7.7441406 L 0.671875 7.7441406 L 0.671875 9.171875 L 2.1015625 9.171875 L 2.1015625 10.601562 L 0.671875 10.601562 L 0.671875 12.029297 L 2.1015625 12.029297 L 2.1015625 13.457031 L 3.5292969 13.457031 L 3.5292969 12.029297 L 4.9570312 12.029297 L 4.9570312 13.457031 L 6.3867188 13.457031 L 6.3867188 12.029297 L 7.8144531 12.029297 L 7.8144531 13.457031 L 9.2441406 13.457031 L 9.2441406 12.029297 L 10.671875 12.029297 L 10.671875 13.457031 L 12.101562 13.457031 L 12.101562 12.029297 L 13.529297 12.029297 L 13.529297 10.601562 L 12.101562 10.601562 L 12.101562 9.171875 L 13.529297 9.171875 L 13.529297 7.7441406 L 12.101562 7.7441406 L 12.101562 6.3144531 L 13.529297 6.3144531 L 13.529297 4.8867188 L 12.101562 4.8867188 L 12.101562 3.4570312 L 13.529297 3.4570312 L 13.529297 2.0292969 L 12.101562 2.0292969 L 12.101562 0.6015625 L 10.671875 0.6015625 L 10.671875 2.0292969 L 9.2441406 2.0292969 L 9.2441406 0.6015625 L 7.8144531 0.6015625 L 7.8144531 2.0292969 L 6.3867188 2.0292969 L 6.3867188 0.6015625 L 4.9570312 0.6015625 L 4.9570312 2.0292969 L 3.5292969 2.0292969 L 3.5292969 0.6015625 L 2.1015625 0.6015625 z "
+         style="fill:#000000" />
+    </g>
+  </g>
+</svg></td>
+        <td>Charge CPU {{cpu}}</td>
+        <td><div class="progress">
+            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow={{cpu}} aria-valuemin="0" aria-valuemax="100"
+                 style="width:{{cpu}}%;">
+                {{cpu}}%
+            </div>
+        </div></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<script>
+
+element = document.getElementById("idtemp");
+var temperature = parseInt(element.getAttribute("temp"));
+
+if (temperature < 40)
+{
+  var elalerte = document.getElementById("alertetemp");
+  elalerte.innerHTML = "Tout va bien";
+  elalerte.setAttribute("class", "alert alert-success");
+  elalerte.setAttribute("role", "alert");
+}
+if (temperature > 40)
+{
+  var elalerte = document.getElementById("alertetemp");
+  elalerte.innerHTML = "Attention à la température";
+  elalerte.setAttribute("class", "alert alert-danger");
+  elalerte.setAttribute("role", "alert");
+}
+
+</script>
+
 </body>
 </html>

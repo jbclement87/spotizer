@@ -25,15 +25,18 @@
         <div class="row">
             <img src="/{{artiste.image}}">
         </div>
-            <div class="col-lg-4"> {{artiste.nom|capfirst}}</div>
+            <div> {{artiste.nom|capfirst}}</div>
 
+
+
+        <audio src="" controls id="idmorceaux"> </audio>
 
 
 
 
     <ul>
     {% for morceaux in mesmorceaux %}
-        <li> {{morceaux.nom}} <audio src="/{{morceaux.file}}" controls >coucou </audio> </li>
+        <li><a href="#" onclick="play('/{{morceaux.file}}');" >{{morceaux.nom}} </a> </li>
     {% endfor %}
 </ul>
             </div>
@@ -42,6 +45,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+  <script>
+
+function play(src) {
+	element = document.getElementById("idmorceaux");
+    element.setAttribute("src", src);
+}
+
+
+</script>
   </body>
 </html>
 

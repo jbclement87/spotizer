@@ -102,6 +102,7 @@ def stat_psutil(request):
     text = outs.split("\n")
 
     temperature = text[2].split(":")[1].split("(")[0]
+    temperature = temperature.split("+")[1].split('.')[0]
 
 
 
